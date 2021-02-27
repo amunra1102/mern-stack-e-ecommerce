@@ -106,7 +106,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
 router.post('/register', async (req, res) => {
   console.log(req.body);
   let user = new User({
@@ -128,7 +127,6 @@ router.post('/register', async (req, res) => {
 
   res.send(user);
 });
-
 
 router.delete('/:id', (req, res) => {
   User.findByIdAndRemove(req.params.id).then(user => {
@@ -152,6 +150,5 @@ router.get('/get/count', async (req, res) => {
     userCount: userCount
   });
 });
-
 
 module.exports = router;
